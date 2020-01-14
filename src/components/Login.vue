@@ -26,8 +26,8 @@ export default {
     data() {
         return {
             loginForm: {
-                username: '',
-                password: ""
+                username: 'admin',
+                password: "admin"
             },
             rules: {
                 username: [{
@@ -70,7 +70,7 @@ export default {
 
 <style lang="less" scoped>
 .login_container {
-    background-color: red;
+    background-color: #373d41;
     height: 100%;
 }
 
