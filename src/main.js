@@ -1,8 +1,19 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './vue-router';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import './assets/fonts/iconfont.css';
+Vue.use(ElementUI);
+import './assets/css/global.css';
+import axios from 'axios';
 
-Vue.config.productionTip = false
+axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/';
+
+Vue.prototype.$http = axios;
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+    router,
+    render: h => h(App),
+}).$mount('#app');
